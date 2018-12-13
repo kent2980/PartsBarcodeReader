@@ -13,12 +13,17 @@ import jp.data.exception.BarcodeReaderException;
  */
 public class BarcordReader {
 	private int barcodeLine;
-	private final String barcodeText;
+	private String barcodeText;
 	private int barcodeType;
 	private String makerCode;
 	private String partsCode;
 	private int pcs;
 	private String serial;
+
+	/**
+	 * デフォルトコンストラクタ
+	 */
+	public BarcordReader() {}
 
 	/**
 	 * コンストラクタ
@@ -115,7 +120,7 @@ public class BarcordReader {
 	 * @param barcodeLine セットする barcodeLine
 	 * @throws BarcodeReaderException 適切なバーコード形式ではありません
 	 */
-	private final void setBarcodeLine() throws BarcodeReaderException {
+	private void setBarcodeLine() throws BarcodeReaderException {
 		boolean firstLine = barcodeText.contains("3N1");
 		boolean secondLine = barcodeText.contains("3N2");
 		if(firstLine == true) {
@@ -128,11 +133,27 @@ public class BarcordReader {
 	}
 
 	/**
+	 * バーコードデータを更新します
+	 * @param barcodeText セットする barcodeText
+	 * @throws BarcodeReaderException
+	 */
+	public void setBarcodeText(String barcodeText) throws BarcodeReaderException {
+		this.barcodeText = barcodeText;
+		setBarcodeLine();
+		setBarcodeType();
+		setBarcodeLine();
+		setPartsCode();
+		setPcs();
+		setSerial();
+		setMakerCode();
+	}
+
+	/**
 	 * バーコードのタイプを識別します<br>
 	 * （0＝通常品、1＝オラクル版、3＝社外版）
 	 * @param barcodeType セットする barcodeType
 	 */
-	private final void setBarcodeType() {
+	private void setBarcodeType() {
 		boolean spaceCheck = barcodeText.contains(" ");
 		int spaceIndex = barcodeText.indexOf(" ");
 		switch(barcodeLine) {
@@ -162,7 +183,7 @@ public class BarcordReader {
 	 * メーカーコードを識別します
 	 * @param makerCode セットする makerCode
 	 */
-	private final void setMakerCode() {
+	private void setMakerCode() {
 		int barcodeLenght = barcodeText.length();
 		int endSpacePoint = barcodeText.lastIndexOf(" ");
 		if(barcodeLine == 2 && endSpacePoint != -1) {
@@ -174,7 +195,7 @@ public class BarcordReader {
 	 * 部品コードを取得します
 	 * @param partsCode セットする partsCode
 	 */
-	private final void setPartsCode() {
+	private void setPartsCode() {
 		switch(barcodeType) {
 		case 0:
 			if(barcodeLine == 1 && barcodeText.length() > 3) {
@@ -200,7 +221,7 @@ public class BarcordReader {
 	 * 部品の個数を取得します
 	 * @param pcs セットする pcs
 	 */
-	private final void setPcs() {
+	private void setPcs() {
 		int barcodeLenght = barcodeText.length();
 		switch(barcodeType) {
 		case 0:
@@ -227,7 +248,7 @@ public class BarcordReader {
 	 * シリアルを取得します
 	 * @param serial セットする serial
 	 */
-	private final void setSerial() {
+	private void setSerial() {
 		if(barcodeLine == 2) {
 			int firstSpacePoint = barcodeText.indexOf(" ");
 			int endSpacePoint = barcodeText.lastIndexOf(" ");

@@ -12,9 +12,9 @@ public class BarcodeReadTest {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("バーコード入力してください");
 		String barcodeText = sc.nextLine();
-		BarcordReader br;
+		BarcordReader br = new BarcordReader();
 		try {
-			br = new BarcordReader(barcodeText);
+			br.setBarcodeText(barcodeText);
 			System.out.println("部品コード：" + br.getPartsCode());
 			System.out.println("個数：" + br.getPcs());
 			System.out.println("シリアル：" + br.getSerial());
