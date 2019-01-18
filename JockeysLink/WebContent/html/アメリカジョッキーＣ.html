@@ -1,0 +1,799 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
+<link href="../css/danceTableGraph.css" rel="stylesheet">
+<link href="/JockeysLink/css/danceTableGraph.css" rel="stylesheet">
+<link rel="shortcut icon" href="/JockeysLink/icon/kyosoba_3.ico">
+<title>アメリカジョッキーＣ</title>
+</head>
+<body id="dance">
+
+<!-- *****************************************************************************************
+     *****************************************************************************************
+     							レースデータを記述します
+     *****************************************************************************************
+     ***************************************************************************************** -->
+<div id="title">
+
+  <a href="/JockeysLink/kaisaichedule?year=2019">
+  <div id="logo">
+    <!-- <img src="../picture/logo.jpg" alt="トップページへのリンク" class="logo"> -->
+    <img src="/JockeysLink/picture/logo.jpg" alt="トップページへのリンク" class="logo">
+    <span class="title">Jockeys->Link</span>
+  </div>
+  </a>
+  <div id="roundData">
+  	  <span class="kaisai">2016年01月24日（日）</span>
+	  <span class="keibajo">中山</span>
+	  <span class="round">11R</span>
+  </div>
+  <div id="kyosomei">
+
+    <span class="kaiji">第57回</span>
+  	<span class="kyosomei">アメリカジョッキーＣ</span>
+  </div>
+  <div id="raceData">
+	  <div class="raceSelect">
+	  	<form name="fm">
+		  	<select name="s" class="raceSelect" onchange="urlJump()">
+		  		<option value="" hidden disabled selected></option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012406010801&mode=dance">中山 - 01R　3歳未勝利</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012406010802&mode=dance">中山 - 02R　3歳未勝利</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012406010803&mode=dance">中山 - 03R　3歳新馬</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012406010804&mode=dance">中山 - 04R　4歳以上500万下</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012406010805&mode=dance">中山 - 05R　3歳未勝利</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012406010806&mode=dance">中山 - 06R　3歳未勝利</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012406010807&mode=dance">中山 - 07R　3歳500万下</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012406010808&mode=dance">中山 - 08R　4歳以上500万下</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012406010809&mode=dance">中山 - 09R　初茜賞</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012406010810&mode=dance">中山 - 10R　東雲賞</option>
+
+		  		<option selected value="/JockeysLink/DanceTableGraph?racecode=2016012406010811&mode=dance">中山 - 11R　アメリカジョッキーＣ</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012406010812&mode=dance">中山 - 12R　4歳以上1000万下</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010401&mode=dance">中京 - 01R　3歳未勝利</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010402&mode=dance">中京 - 02R　3歳未勝利</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010403&mode=dance">中京 - 03R　3歳未勝利</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010404&mode=dance">中京 - 04R　サラ障害4歳以上未勝利</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010405&mode=dance">中京 - 05R　3歳新馬</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010406&mode=dance">中京 - 06R　4歳以上500万下</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010407&mode=dance">中京 - 07R　4歳以上500万下</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010408&mode=dance">中京 - 08R　4歳以上500万下</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010409&mode=dance">中京 - 09R　4歳以上500万下</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010410&mode=dance">中京 - 10R　蒲郡特別</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010411&mode=dance">中京 - 11R　東海テレビ杯東海Ｓ</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012407010412&mode=dance">中京 - 12R　知立特別</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010801&mode=dance">京都 - 01R　3歳未勝利</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010802&mode=dance">京都 - 02R　3歳新馬</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010803&mode=dance">京都 - 03R　3歳未勝利</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010804&mode=dance">京都 - 04R　3歳500万下</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010805&mode=dance">京都 - 05R　3歳未勝利</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010806&mode=dance">京都 - 06R　3歳新馬</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010807&mode=dance">京都 - 07R　4歳以上500万下</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010808&mode=dance">京都 - 08R　4歳以上500万下</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010809&mode=dance">京都 - 09R　睦月賞</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010810&mode=dance">京都 - 10R　山科ステークス</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010811&mode=dance">京都 - 11R　石清水ステークス</option>
+
+		  		<option value="/JockeysLink/DanceTableGraph?racecode=2016012408010812&mode=dance">京都 - 12R　4歳以上1000万下</option>
+
+		  	</select>
+	  	</form>
+	  </div>
+	  <div id="data">
+		  <div class="courseData desctop">
+		    <span>2200m</span>
+		    <span>芝･右外</span>
+		    <span>15:35</span>
+		  </div>
+		  <div class="raceData desctop">
+		  	<span>オープン
+</span>
+		  	<span>サラ系4歳以上
+</span>
+		  	<span>(国際)[指定]
+</span>
+		  	<span>別定</span>
+		  	<span>16頭</span>
+		  	<!--  <span>＜＞</span> -->
+		  </div>
+	  </div>
+  </div>
+    <div id="menu">
+      <div>
+        <span class ="navi">分析</span>
+      </div>
+          <div>
+            <a href="https://ipat.netkeiba.com/?pid=ipat_input&rid=201606010811" target="_blank" class ="navi">IPAT</a>
+          </div>
+          <div>
+            <a href="/JockeysLink/DanceTableGraph?racecode=2016012406010811&mode=result" class ="navi">結果</a>
+          </div>
+  </div>
+</div>
+
+<!-- URLジャンプのJavaScript -->
+<script type="text/javascript">
+function urlJump() {
+    var browser = document.fm.s.value;
+    location.href = browser;
+}
+</script>
+<!-- *****************************************************************************************
+     ********************************ここからグラフを記述する*****************************************
+     ***************************************************************************************** -->
+
+        <!-- ①チャート描画先を設置 -->
+
+        <div id="timeChart" class="Chart" width:"100%">
+        	<h2 class=title>タイムランク</h2>
+        	<canvas id="myChart" width="100" height="35"></canvas>
+		</div>
+
+        <!-- ②Chart.jsの読み込み -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
+		<!-- ③チャート描画情報の作成 -->
+		<script>
+			window.onload = function() {
+			    ctx = document.getElementById("myChart").getContext("2d");
+			    window.myBar = new Chart(ctx, {
+			        type: 'bar',
+			        data: barChartData,
+			        options: complexChartOption
+			    });
+			};
+		</script>
+
+        <!-- ④チャートデータの作成 -->
+        <script>
+            var barChartData = {
+                	labels: [["6. サトノラーゼン / 1人気", "（前走：2015／10／25）"],["3. ディサイファ / 2人気", "（前走：2015／12／5）"],["1. マイネルフロスト / 5人気", "（前走：2016／1／5）"],["13. ヤマニンボワラクテ / 6人気", "（前走：2016／1／9）"],["7. ショウナンバッハ / 7人気", "（前走：2015／11／29）"],["11. スーパームーン / 3人気", "（前走：2015／12／20）"],["12. フラガラッハ / 13人気", "（前走：2015／11／8）"],["5. クランモンタナ / 10人気", "（前走：2015／12／20）"],["16. マイネルメダリスト / 15人気", "（前走：2015／12／5）"],["4. ショウナンマイティ / 11人気", "（前走：2014／6／8）"],["15. マイネルディーン / 12人気", "（前走：2016／1／5）"],["9. ライズトゥフェイム / 4人気", "（前走：2016／1／5）"],["8. ステラウインド / 9人気", "（前走：2016／1／5）"],["14. スズカデヴィアス / 8人気", "（前走：2015／12／5）"],["2. アップルジャック / 16人気", "（前走：2016／1／17）"],["10. ルルーシュ / 14人気", "（前走：2014／8／24）"]],
+                    datasets: [
+                    {
+                    	type: 'bar',
+                        label: 'タイムランク',
+                    	data: [57.21,55.94,55.83,55.62,54.59,54.31,54.19,53.56,51.86,51.48,50.80,50.12,50.11,48.37,41.21,38.79],
+                    	backgroundColor : ['rgba(246, 255, 69, 0.8)','rgba(255, 140, 60, 0.8)','rgba(255, 57, 59, 0.8)','rgba(255, 140, 60, 0.8)','rgba(57, 157, 255, 0.8)','rgba(255, 140, 60, 0.8)','rgba(255, 57, 59, 0.8)','rgba(57, 157, 255, 0.8)','rgba(246, 255, 69, 0.8)','rgba(57, 157, 255, 0.8)','rgba(57, 157, 255, 0.8)','rgba(57, 157, 255, 0.8)','rgba(246, 255, 69, 0.8)','rgba(255, 57, 59, 0.8)','rgba(246, 255, 69, 0.8)','rgba(255, 57, 59, 0.8)'],
+                        borderWidth: 1
+                    },
+                    {
+                    	type: 'line',
+                    	label: 'トップスピード',
+                    	data: [50.72,49.52,50.14,49.85,52.34,52.24,51.20,53.20,51.83,53.06,52.37,49.96,45.98,40.40,42.36,38.80],
+                    	borderColor : 'rgba(54,164,235)',
+                        backgroundColor : 'rgba(54,164,235,0.5)'
+                    },
+                    {
+                    	type: 'line',
+                    	label: '1走前タイムランク',
+                    	data: [60.98,56.37,52.95,55.43,57.96,60.19,49.77,60.18,47.62,55.08,45.55,49.59,49.59,44.24,37.39,38.32],
+                    	borderColor : 'rgba(254,164,65)',
+                        backgroundColor : 'rgba(254,164,65,0.1)'
+                    },
+                    {
+                    	type: 'line',
+                    	label: '1走前RPCI',
+                    	data: [54.9,53.0,58.6,59.2,53.3,50.1,60.6,50.1,56.6,44.1,58.6,58.6,58.6,56.6,54.4,47.8],
+                    	borderColor : 'rgb(221, 226, 15)',
+                        backgroundColor : 'rgba(241, 252, 27,0.1)'
+                    }
+                    ],
+            };
+		</script>
+
+		<!-- ⑤オプションの作成 -->
+
+		<script>
+		var complexChartOption = {
+				  tooltips: {
+				  },
+	              responsive: true,
+                    scales: {
+                    	xAxes: [{
+                    		ticks: {
+                    			autoSkip: false,
+                    			fontSize: 12,
+                    			minRotation: 20
+                    		},
+                    	}],
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero:true,
+                                min: 30,
+                                max: 70,
+                                fontSize: 13.5
+                            },
+                        }],
+                    }
+            };
+        </script>
+
+<!-- *****************************************************************************************
+     **********************************グラフ記述ここまで*******************************************
+     ***************************************************************************************** -->
+
+<!-- *****************************************************************************************
+*********************************							**********************************
+*********************************	テーブルを作成します(*´ω｀*)	**********************************
+*********************************							**********************************************************
+********************************************************************************************************************** -->
+
+	<div class="danceIndex">
+		<div class="tableTitle">
+		<h2>出馬表</h2>
+
+<div class="hidden_box">
+  <label for="label1">過去4走</label>
+  <input type="checkbox" id="label1">
+  <table class="hidden_show">
+      <tr>
+        <th>枠番</th>
+        <th>馬番</th>
+        <th>印</th>
+        <th>馬名</th>
+        <th>性齢</th>
+        <th class="desctop">脚質</th>
+        <th class="desctop">平均距離</th>
+        <th>騎手</th>
+        <th class="desctop">斤量</th>
+        <th>人気</th>
+        <th class="desctop">ｵｯｽﾞ</th>
+        <th class="desctop">馬体重</th>
+        <th class="desctop">調教師</th>
+        <th class="desctop">毛色</th>
+      </tr>
+    </table>
+
+		<table class="danceTable">
+			<tr>
+				<th>枠番</th>
+				<th>馬番</th>
+				<th>印</th>
+				<th>馬名</th>
+				<th>性齢</th>
+				<th class="desctop">脚質</th>
+				<th class="desctop">平均距離</th>
+				<th>騎手</th>
+				<th class="desctop">斤量</th>
+				<th>人気</th>
+				<th class="desctop">ｵｯｽﾞ</th>
+				<th class="desctop">馬体重</th>
+				<th class="desctop">調教師</th>
+				<th class="desctop">毛色</th>
+			</tr>
+
+			<tr>
+
+				<td class="waku1" rowspan="2">1</td>
+
+				<td>1</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2011106350" target="_blank">マイネルフロスト</a></td>
+				<td>牡5
+				<td class="desctop">逃げ
+				<td class="desctop">2175m
+				<td>松岡正海</td>
+				<td class="desctop">56.0
+</td>
+				<td>5
+</td>
+				<td class="desctop">7.9</td>
+				<td class="desctop">488kg</td>
+				<td class="left desctop">（美）高木登</td>
+				<td class="desctop">芦毛</td>
+			</tr>
+
+			<tr>
+
+				<td>2</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2008105224" target="_blank">アップルジャック</a></td>
+				<td>牡8
+				<td class="desctop">差し
+				<td class="desctop">2025m
+				<td>原田和真</td>
+				<td class="desctop">56.0
+</td>
+				<td>16
+</td>
+				<td class="desctop">283.8</td>
+				<td class="desctop">528kg</td>
+				<td class="left desctop">（美）堀井雅広</td>
+				<td class="desctop">黒鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td class="waku2" rowspan="2">2</td>
+
+				<td>3</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2009102678" target="_blank">ディサイファ</a></td>
+				<td>牡7
+				<td class="desctop">先行
+				<td class="desctop">1950m
+				<td>武豊</td>
+				<td class="desctop">57.0
+</td>
+				<td>2
+</td>
+				<td class="desctop">5.0</td>
+				<td class="desctop">510kg</td>
+				<td class="left desctop">（美）小島太</td>
+				<td class="desctop">鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td>4</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2008101020" target="_blank">ショウナンマイティ</a></td>
+				<td>牡8
+				<td class="desctop">追込
+				<td class="desctop">1750m
+				<td>Ｌ．コントレラス</td>
+				<td class="desctop">56.0
+</td>
+				<td>11
+</td>
+				<td class="desctop">50.3</td>
+				<td class="desctop">508kg</td>
+				<td class="left desctop">（栗）梅田智之</td>
+				<td class="desctop">青鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td class="waku3" rowspan="2">3</td>
+
+				<td>5</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2009105738" target="_blank">クランモンタナ</a></td>
+				<td>牡7
+				<td class="desctop">追込
+				<td class="desctop">2000m
+				<td>三浦皇成</td>
+				<td class="desctop">56.0
+</td>
+				<td>10
+</td>
+				<td class="desctop">49.1</td>
+				<td class="desctop">492kg</td>
+				<td class="left desctop">（栗）音無秀孝</td>
+				<td class="desctop">芦毛</td>
+			</tr>
+
+			<tr>
+
+				<td>6</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2012104735" target="_blank">サトノラーゼン</a></td>
+				<td>牡4
+				<td class="desctop">差し
+				<td class="desctop">2450m
+				<td>Ｆ．ベリー</td>
+				<td class="desctop">56.0
+</td>
+				<td>1
+</td>
+				<td class="desctop">4.4</td>
+				<td class="desctop">466kg</td>
+				<td class="left desctop">（栗）池江泰寿</td>
+				<td class="desctop">鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td class="waku4" rowspan="2">4</td>
+
+				<td>7</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2011106394" target="_blank">ショウナンバッハ</a></td>
+				<td>牡5
+				<td class="desctop">追込
+				<td class="desctop">2250m
+				<td>戸崎圭太</td>
+				<td class="desctop">56.0
+</td>
+				<td>7
+</td>
+				<td class="desctop">9.6</td>
+				<td class="desctop">448kg</td>
+				<td class="left desctop">（美）上原博之</td>
+				<td class="desctop">鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td>8</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2009100374" target="_blank">ステラウインド</a></td>
+				<td>牡7
+				<td class="desctop">差し
+				<td class="desctop">2000m
+				<td>蛯名正義</td>
+				<td class="desctop">56.0
+</td>
+				<td>9
+</td>
+				<td class="desctop">23.5</td>
+				<td class="desctop">494kg</td>
+				<td class="left desctop">（美）尾関知人</td>
+				<td class="desctop">黒鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td class="waku5" rowspan="2">5</td>
+
+				<td>9</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2010104458" target="_blank">ライズトゥフェイム</a></td>
+				<td>牡6
+				<td class="desctop">追込
+				<td class="desctop">2000m
+				<td>石川裕紀人</td>
+				<td class="desctop">56.0
+</td>
+				<td>4
+</td>
+				<td class="desctop">7.7</td>
+				<td class="desctop">490kg</td>
+				<td class="left desctop">（美）加藤征弘</td>
+				<td class="desctop">鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td>10</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2008102912" target="_blank">ルルーシュ</a></td>
+				<td>牡8
+				<td class="desctop">逃げ
+				<td class="desctop">2350m
+				<td>柴田善臣</td>
+				<td class="desctop">56.0
+</td>
+				<td>14
+</td>
+				<td class="desctop">103.7</td>
+				<td class="desctop">526kg</td>
+				<td class="left desctop">（美）藤沢和雄</td>
+				<td class="desctop">黒鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td class="waku6" rowspan="2">6</td>
+
+				<td>11</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2009105928" target="_blank">スーパームーン</a></td>
+				<td>牡7
+				<td class="desctop">先行
+				<td class="desctop">2125m
+				<td>Ｃ．ルメール</td>
+				<td class="desctop">56.0
+</td>
+				<td>3
+</td>
+				<td class="desctop">6.5</td>
+				<td class="desctop">520kg</td>
+				<td class="left desctop">（美）藤沢和雄</td>
+				<td class="desctop">青鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td>12</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2007103033" target="_blank">フラガラッハ</a></td>
+				<td>牡9
+				<td class="desctop">逃げ
+				<td class="desctop">2300m
+				<td>高倉稜</td>
+				<td class="desctop">56.0
+</td>
+				<td>13
+</td>
+				<td class="desctop">100.7</td>
+				<td class="desctop">504kg</td>
+				<td class="left desctop">（栗）松永幹夫</td>
+				<td class="desctop">鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td class="waku7" rowspan="2">7</td>
+
+				<td>13</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2011105057" target="_blank">ヤマニンボワラクテ</a></td>
+				<td>ｾﾝ5
+				<td class="desctop">先行
+				<td class="desctop">2375m
+				<td>藤懸貴志</td>
+				<td class="desctop">56.0
+</td>
+				<td>6
+</td>
+				<td class="desctop">8.3</td>
+				<td class="desctop">488kg</td>
+				<td class="left desctop">（栗）松永幹夫</td>
+				<td class="desctop">鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td>14</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2011105898" target="_blank">スズカデヴィアス</a></td>
+				<td>牡5
+				<td class="desctop">逃げ
+				<td class="desctop">3075m
+				<td>藤岡康太</td>
+				<td class="desctop">56.0
+</td>
+				<td>8
+</td>
+				<td class="desctop">14.0</td>
+				<td class="desctop">508kg</td>
+				<td class="left desctop">（栗）橋田満</td>
+				<td class="desctop">黒鹿毛</td>
+			</tr>
+
+			<tr>
+
+				<td class="waku8" rowspan="2">8</td>
+
+				<td>15</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2009104977" target="_blank">マイネルディーン</a></td>
+				<td>牡7
+				<td class="desctop">追込
+				<td class="desctop">2000m
+				<td>大野拓弥</td>
+				<td class="desctop">56.0
+</td>
+				<td>12
+</td>
+				<td class="desctop">95.8</td>
+				<td class="desctop">466kg</td>
+				<td class="left desctop">（美）鹿戸雄一</td>
+				<td class="desctop">青毛</td>
+			</tr>
+
+			<tr>
+
+				<td>16</td>
+				<td>
+					<select name="shirushi" class="shirushi">
+						<option selected></option>
+						<option value="marumaru">◎</option>
+						<option value="maru">〇</option>
+						<option value="kurosankaku">▲</option>
+						<option value="sankaku">△</option>
+						<option value="star">★</option>
+					</select>
+				</td>
+				<td class="left"><a href="https://db.netkeiba.com/horse/2008104739" target="_blank">マイネルメダリスト</a></td>
+				<td>牡8
+				<td class="desctop">差し
+				<td class="desctop">2750m
+				<td>柴田大知</td>
+				<td class="desctop">56.0
+</td>
+				<td>15
+</td>
+				<td class="desctop">129.7</td>
+				<td class="desctop">504kg</td>
+				<td class="left desctop">（美）田中清隆</td>
+				<td class="desctop">鹿毛</td>
+			</tr>
+
+		</table>
+		</div>
+		<div id="index">
+			<h2>展開予想</h2>
+			<div class="data">
+				<h3>隊列</h3>
+				<span>ショート</span>
+				<h3>ペース</h3>
+				<span>スローペース</span>
+				<h3>逃げ</h3>
+				<span>
+				マイネルフロスト、ルルーシュ、フラガラッハ、スズカデヴィアス
+				</span>
+				<h3>先行</h3>
+				<span>
+				ディサイファ、スーパームーン、ヤマニンボワラクテ
+				</span>
+				<h3>差し</h3>
+				<span>
+				アップルジャック、サトノラーゼン、ステラウインド、マイネルメダリスト
+				</span>
+				<h3>追込み</h3>
+				<span>
+				ショウナンマイティ、クランモンタナ、ショウナンバッハ、ライズトゥフェイム、マイネルディーン
+				</span>
+	    	</div>
+    	</div>
+	</div>
+
+  </div>
+</body>
+</html>
